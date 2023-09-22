@@ -1,0 +1,34 @@
+int majorityElement(vector<int> v) {
+	int count =0;
+	int element;
+	for(int i=0 ; i< v.size() ; i++)
+	{
+		if(count ==0)
+		{
+			count = 1 ;
+			element =v[i];
+		}
+		else if(element == v[i])
+		{
+			count++;
+		}
+		else{
+			count--;
+		}
+	}
+	int x=v.size()/2;
+	int count1=0;
+	for(int i=0 ; i<v.size() ; i++)
+	{
+		if(v[i]==element)
+		{
+			count1++;
+		}
+	}
+	if(count1>x)
+	{
+		return element;
+	}
+	return 0;
+
+}
