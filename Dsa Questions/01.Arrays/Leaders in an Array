@@ -10,5 +10,5 @@ vector<int> superiorElements(vector<int>&a) {
             max=a[i];
         }
     }
-    return ;
+    return ans;
 }
